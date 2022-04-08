@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_NAME: undefined # will be set conditionally below
+  AZURE_FUNCTIONAPP_NAME: azdevops-dev-function-app # will be set conditionally below
   AZURE_FUNCTIONAPP_PACKAGE_PATH: "." # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: "12.x" # set this to the node version to use (supports 8.x, 10.x, 12.x)
 

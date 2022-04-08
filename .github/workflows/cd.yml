@@ -17,19 +17,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set env vars (dev)
-        if: endsWith(github.ref, '/dev')
+        if: endsWith(github.ref, '/main')
         run: |
           echo "AZURE_FUNCTIONAPP_NAME=azdevops-dev-function-app" >> $GITHUB_ENV
           echo "PUBLISH_PROFILE_VAR_NAME=AZURE_FUNCTIONAPP_PUBLISH_PROFILE_DEV" >> $GITHUB_ENV
 
       - name: Set env vars (prod)
-        if: endsWith(github.ref, '/master')
+        if: endsWith(github.ref, '/main')
         run: |
           echo "AZURE_FUNCTIONAPP_NAME=azfunccdgh-prod-function-app" >> $GITHUB_ENV
           echo "PUBLISH_PROFILE_VAR_NAME=AZURE_FUNCTIONAPP_PUBLISH_PROFILE_PROD" >> $GITHUB_ENV
 
       - name: Checkout commit
-        uses: actions/checkout@master
+        uses: actions/checkout@main
 
       - name: Setup Node ${{ env.NODE_VERSION }} environment
         uses: actions/setup-node@v1

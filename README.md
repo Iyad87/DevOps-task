@@ -1,4 +1,4 @@
-# Continuous Deployment for Azure Functions with Github Actions
+# Continuous delivery by using Azure Functions with Github Actions
 
 In VSCode you can use the Remote Containers extension to start the project in a Docker container.
 It includes Node.js, Azure CLI, Terraform.
